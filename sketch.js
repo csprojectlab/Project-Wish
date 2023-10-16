@@ -8,6 +8,11 @@ let points = [];
 let vehicles = [];
 let wishingText = "Soniya Madam"
 let explosionSound = null;
+let moonInfo = {
+    moon: ['🌙'],
+    x: 550,
+    y: 70
+}
 
 function preload () {
     font = loadFont('AvenirNextLTPro-Demi.otf');
@@ -71,6 +76,11 @@ function draw () {
         v.update();
         v.show();
     })
+    // Moon
+    push()
+    textSize(75)
+    text(moonInfo.moon[0], moonInfo.x, moonInfo.y)
+    pop()
 }
 
 function simpleRockets () {
